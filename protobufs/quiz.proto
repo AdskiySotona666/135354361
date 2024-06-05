@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+service QuizService {
+    rpc SubmitQuiz (QuizRequest) returns (QuizResponse);
+}
+
+message QuizRequest {
+    string user_id = 1;
+    repeated string answers = 2;
+}
+
+message QuizResponse {
+    bool success = 1;
+    string message = 2;
+}
