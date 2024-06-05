@@ -5,10 +5,6 @@ import auth_pb2_grpc
 
 
 class AuthService(auth_pb2_grpc.AuthServiceServicer):
-    def __init__(self):
-        # Инициализация базы данных пользователей
-        self.users = {}
-
     def Register(self, request, context):
         response = auth_pb2.RegisterResponse()
 
